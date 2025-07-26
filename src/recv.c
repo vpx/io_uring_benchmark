@@ -178,8 +178,8 @@ struct args parse_args(int argc, char* argv[]) {
         }
 
         const char sq_entries_opt[] = "--sq_entries=";
-        if (strncmp(sq_entries_opt, argv[i], sizeof(sq_entries_opt)) == 0) {
-            args.sq_entries = atoi(argv[i] + sizeof(sq_entries_opt));
+        if (strncmp(sq_entries_opt, argv[i], strlen(sq_entries_opt)) == 0) {
+            args.sq_entries = atoi(argv[i] + strlen(sq_entries_opt));
             if (args.sq_entries == 0) {
                 printf("Invalid value for sq_entries\n");
                 exit(EXIT_FAILURE);
@@ -188,8 +188,8 @@ struct args parse_args(int argc, char* argv[]) {
         }
 
         const char cq_entries_opt[] = "--cq_entries=";
-        if (strncmp(cq_entries_opt, argv[i], sizeof(cq_entries_opt)) == 0) {
-            args.cq_entries = atoi(argv[i] + sizeof(cq_entries_opt));
+        if (strncmp(cq_entries_opt, argv[i], strlen(cq_entries_opt)) == 0) {
+            args.cq_entries = atoi(argv[i] + strlen(cq_entries_opt));
             if (args.cq_entries == 0) {
                 printf("Invalid value for cq_entries\n");
                 exit(EXIT_FAILURE);
@@ -198,8 +198,8 @@ struct args parse_args(int argc, char* argv[]) {
         }
 
         const char buffs_entries_opt[] = "--buffs_entries=";
-        if (strncmp(buffs_entries_opt, argv[i], sizeof(buffs_entries_opt)) == 0) {
-            args.buffs_entries = atoi(argv[i] + sizeof(buffs_entries_opt));
+        if (strncmp(buffs_entries_opt, argv[i], strlen(buffs_entries_opt)) == 0) {
+            args.buffs_entries = atoi(argv[i] + strlen(buffs_entries_opt));
             if (args.buffs_entries == 0) {
                 printf("Invalid value for buffs_entries\n");
                 exit(EXIT_FAILURE);
@@ -208,8 +208,8 @@ struct args parse_args(int argc, char* argv[]) {
         }
 
         const char buff_size_opt[] = "--buff_size=";
-        if (strncmp(buff_size_opt, argv[i], sizeof(buff_size_opt)) == 0) {
-            args.buff_size = atoi(argv[i] + sizeof(buff_size_opt));
+        if (strncmp(buff_size_opt, argv[i], strlen(buff_size_opt)) == 0) {
+            args.buff_size = atoi(argv[i] + strlen(buff_size_opt));
             if (args.buff_size == 0) {
                 printf("Invalid value for buff_size\n");
                 exit(EXIT_FAILURE);
@@ -218,8 +218,8 @@ struct args parse_args(int argc, char* argv[]) {
         }
 
         const char sq_idle_opt[] = "--sq_idle=";
-        if (strncmp(sq_idle_opt, argv[i], sizeof(sq_idle_opt)) == 0) {
-            args.sq_idle = atoi(argv[i] + sizeof(sq_idle_opt));
+        if (strncmp(sq_idle_opt, argv[i], strlen(sq_idle_opt)) == 0) {
+            args.sq_idle = atoi(argv[i] + strlen(sq_idle_opt));
             if (args.sq_idle == 0) {
                 printf("Invalid value for sq_idle\n");
                 exit(EXIT_FAILURE);
